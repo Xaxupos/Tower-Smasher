@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TowerBase : MonoBehaviour, ITarget
+public class Tower : MonoBehaviour, ITarget
 {
     [Header("Dependencies")] 
     [SerializeField] private TowerShooting _towerShooting;

@@ -4,7 +4,7 @@ using VInspector;
 
 public class BulletBase : MonoBehaviour
 {
-    [FormerlySerializedAs("_startingData")] [SerializeField] private BulletConfig config;
+    [SerializeField] private BulletConfig config;
     [ReadOnly] [SerializeField] private BulletCurrentData _currentData;
 
     public void Initialize()

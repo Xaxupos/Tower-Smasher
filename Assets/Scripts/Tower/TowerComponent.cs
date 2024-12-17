@@ -2,11 +2,11 @@ using UnityEngine;
 
 public abstract class TowerComponent : MonoBehaviour
 {
-    protected TowerBase _towerBase;
+    protected Tower Tower;
     
-    public virtual void Initialize(TowerBase towerBase)
+    public virtual void Initialize(Tower tower)
     {
-        _towerBase = towerBase;
+        Tower = tower;
     }
 
     protected virtual void LoadStartingData() {}

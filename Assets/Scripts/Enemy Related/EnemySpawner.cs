@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
     [Header("References")] 
     [SerializeField] private List<EnemyConfig> _enemyConfigs;
     [SerializeField] private EnemySpawnStrategy spawnStrategy;
-    [SerializeField] private TowerBase _tower;
+    [SerializeField] private Tower _tower;
     [SerializeField] private float _maxEnemies;
 
     private IEnemyFactory factory = new EnemyFactory();

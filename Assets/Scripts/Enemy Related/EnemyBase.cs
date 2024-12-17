@@ -1,11 +1,10 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 using VInspector;
 
 public class EnemyBase : MonoBehaviour, ITarget
 {
     [SerializeField] private EnemyStateController _stateController;
-    [FormerlySerializedAs("_startingData")] [SerializeField] private EnemyConfig config;
+    [SerializeField] private EnemyConfig config;
     [SerializeField] [ReadOnly] private EnemyCurrentData _currentData;
     
     public void Initialize(ITarget target)
@@ -21,5 +20,6 @@ public class EnemyBase : MonoBehaviour, ITarget
         _currentData.Health = Random.Range(config.Health.x, config.Health.y);
     }
     
+    public EnemyCurrentData GetCurrentData() => _currentData;
     public EnemyConfig GetStartingData() => config;
 }

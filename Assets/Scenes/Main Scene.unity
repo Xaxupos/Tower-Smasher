@@ -200,7 +200,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 46f3dd02515d10043a2c1645553800c2, type: 2}
   spawnStrategy: {fileID: 11400000, guid: d02d558eb8ebbf74089b0bf40d048808, type: 2}
   _tower: {fileID: 2073309529}
-  _maxEnemies: 10
+  _maxEnemies: 1
 --- !u!4 &575823762
 Transform:
   m_ObjectHideFlags: 0

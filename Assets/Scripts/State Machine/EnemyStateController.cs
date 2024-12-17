@@ -8,6 +8,6 @@ public class EnemyStateController : StateController
         _enemy = enemy;
         _target = target;
         
-        SetNewState(new EnemyMoveState(_enemy, target));
+        SetNewState(new EnemyMoveState(_enemy,this, target));
     }
 }

@@ -21,6 +21,11 @@ public abstract class StateController : MonoBehaviour
         _currentState?.UpdateState();
     }
 
+    public virtual void FixedUpdate()
+    {
+        _currentState?.FixedUpdateState();
+    }
+    
     public virtual void OnDisable()
     {
         _currentState?.OnDisable();

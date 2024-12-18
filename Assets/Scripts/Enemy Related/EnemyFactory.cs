@@ -7,7 +7,8 @@ public class EnemyFactory : IEnemyFactory
         GameObject enemy = PoolManager.Instance.GetFromPool(config.EnemyType);
         EnemyBase enemyComponent = enemy.GetComponent<EnemyBase>();
         enemyComponent.Initialize(target);
-            
+        
+        GameManager.Instance.AddEnemy(enemyComponent);
         return enemyComponent;
     }
 }

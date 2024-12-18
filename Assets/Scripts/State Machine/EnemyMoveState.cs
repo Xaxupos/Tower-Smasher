@@ -18,6 +18,7 @@ public class EnemyMoveState : EnemyBaseState
 
     public override void FixedUpdateState()
     {
+        return;
         if (_target == null) return;
 
         Vector2 direction = (_target.gameObject.transform.position - _enemy.transform.position).normalized;

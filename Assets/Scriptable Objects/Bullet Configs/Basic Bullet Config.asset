@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Basic Bullet Config
   m_EditorClassIdentifier: 
   BulletType: 1
-  FireClip: {fileID: 0}
-  FireVFX: 0
-  ImpactClip: {fileID: 0}
-  ImpactVFX: 0
+  FireClip: {fileID: 8300000, guid: f5f75d90675ea7e4b88418585595a842, type: 3}
+  FireVFX: 3
+  ImpactClip: {fileID: 8300000, guid: 57d16b23dddd17d4eb0bf5beef334dfb, type: 3}
+  ImpactVFX: 4
   SpeedModificator: 1
   DamageModificator: 1
   ProjectileLifetime: 5

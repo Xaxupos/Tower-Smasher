@@ -15,7 +15,7 @@ public abstract class BulletBase : MonoBehaviour
     {
         ContactPoint2D contact = other.contacts[0];
 
-        CreateAudioVisuals(_config.ImpactVFX, contact.point, _config.ImpactClip);
+        CreateAudioVisuals(_config.ImpactVFX, contact.point, _config.ImpactClip, true);
         _projectileLifeTimer?.StopTimer();
         PoolManager.Instance.ReleaseToPool(_config.BulletType, gameObject);
     }
@@ -47,7 +47,7 @@ public abstract class BulletBase : MonoBehaviour
         _currentData.Damage = _weaponStrategy.Damage * _config.DamageModificator;
     }
 
-    protected virtual void CreateAudioVisuals(PooledType vfxType, Vector3 position, AudioClip clip = null)
+    protected virtual void CreateAudioVisuals(PooledType vfxType, Vector3 position, AudioClip clip = null, bool setRightToUp = false)
     {
         if(clip)
             AudioSource.PlayClipAtPoint(clip, transform.position);
@@ -57,6 +57,9 @@ public abstract class BulletBase : MonoBehaviour
             var pooledVFX = PoolManager.Instance.GetFromPool(vfxType);
             pooledVFX.transform.position = position;
             pooledVFX.transform.right = -transform.right;
+
+            if(setRightToUp)
+                pooledVFX.transform.up = -transform.right;
 
             ReturnVFXToPool(pooledVFX, vfxType);
         }   

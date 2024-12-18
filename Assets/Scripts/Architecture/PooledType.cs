@@ -2,5 +2,7 @@ public enum PooledType
 {
     EMPTY,
     BASIC_BULLET,
-    BASIC_ENEMY
+    BASIC_ENEMY,
+    BASIC_BULLET_MUZZLE_FLASH_VFX,
+    BASIC_BULLET_IMPACT_VFX
 }

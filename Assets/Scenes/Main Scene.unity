@@ -289,7 +289,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 46f3dd02515d10043a2c1645553800c2, type: 2}
   spawnStrategy: {fileID: 11400000, guid: d02d558eb8ebbf74089b0bf40d048808, type: 2}
   _tower: {fileID: 2073309529}
-  _maxEnemies: 3
+  _maxEnemies: 1
 --- !u!4 &575823762
 Transform:
   m_ObjectHideFlags: 0
@@ -474,6 +474,18 @@ MonoBehaviour:
       Value:
         ObjectPrefab: {fileID: 2809138433046408139, guid: 7ded8754762b7ab4f9ba8d370d434940, type: 3}
       index: 1
+      isKeyRepeated: 0
+      isKeyNull: 0
+    - Key: 3
+      Value:
+        ObjectPrefab: {fileID: 1752905781611240, guid: a150ddd267ffc1b428ae91d94b828b02, type: 3}
+      index: 2
+      isKeyRepeated: 0
+      isKeyNull: 0
+    - Key: 4
+      Value:
+        ObjectPrefab: {fileID: 1735349400919506, guid: a17580581e360e74db460cc3d5dc0396, type: 3}
+      index: 3
       isKeyRepeated: 0
       isKeyNull: 0
     dividerPos: 0.33

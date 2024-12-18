@@ -10,4 +10,5 @@ public class BulletConfig : ScriptableObject
     public PooledType ImpactVFX;
     public float SpeedModificator = 1;
     public float DamageModificator = 1;
+    public float ProjectileLifetime = 5;
 }

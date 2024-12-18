@@ -6,7 +6,6 @@ public abstract class WeaponStrategy : ScriptableObject
     public float Damage = 1f;
     public float FireCooldown = 1f;
     public float ProjectileSpeed = 10f;
-    public float ProjectileLifetime = 5f; 
 
     protected BulletFactory _bulletFactory;
 

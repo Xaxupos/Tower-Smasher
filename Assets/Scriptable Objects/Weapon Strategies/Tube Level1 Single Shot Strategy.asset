@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be1d944263f5214bb4786e9b8b21a7d, type: 3}
   m_Name: Tube Level1 Single Shot Strategy
   m_EditorClassIdentifier: 
-  RotationSpeed: 100
+  RotationSpeed: 75
   Damage: 1
   FireCooldown: 1
   ProjectileSpeed: 10

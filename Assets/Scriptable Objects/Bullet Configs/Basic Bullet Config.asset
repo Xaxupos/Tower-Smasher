@@ -19,3 +19,4 @@ MonoBehaviour:
   ImpactVFX: 0
   SpeedModificator: 1
   DamageModificator: 1
+  ProjectileLifetime: 5

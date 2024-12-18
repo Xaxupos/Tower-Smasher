@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Basic Enemy Config
   m_EditorClassIdentifier: 
   EnemyType: 2
-  Speed: 5
+  Speed: 2
   Health: {x: 1, y: 1}

@@ -4,6 +4,10 @@ using UnityEngine;
 public class BulletConfig : ScriptableObject
 {
     public PooledType BulletType;
-    public float Speed;
-    public float OnHitDamage;
+    public AudioClip FireClip;
+    public PooledType FireVFX;
+    public AudioClip ImpactClip;
+    public PooledType ImpactVFX;
+    public float SpeedModificator = 1;
+    public float DamageModificator = 1;
 }

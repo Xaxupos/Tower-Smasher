@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f481d5118e60d40b9bc9bc37a477bf, type: 3}
   m_Name: Basic Bullet Config
   m_EditorClassIdentifier: 
-  Speed: 5
-  OnHitDamage: 1
+  BulletType: 1
+  FireClip: {fileID: 0}
+  FireVFX: 0
+  ImpactClip: {fileID: 0}
+  ImpactVFX: 0
+  SpeedModificator: 1
+  DamageModificator: 1

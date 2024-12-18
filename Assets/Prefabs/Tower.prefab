@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d751845ec3a19d4c94aa9a6a9e02e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentBulletType: 0
-  _fireCooldown: 2
+  _firePoint: {fileID: 6883942518268085225}
+  _bulletConfig: {fileID: 11400000, guid: d422b08b6878e04409247de202602b73, type: 2}
+  _currentStrategy: {fileID: 11400000, guid: eb86a030c5cab4149aa2b9e3ce99f03b, type: 2}
 --- !u!1 &120371622086603520
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +91,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 304f9e8be0372284a95504f4f41c2276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationSpeed: 10
 --- !u!1 &2067548240827932796
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +205,37 @@ Transform:
   - {fileID: 7445592921461137078}
   m_Father: {fileID: 722294833497900564}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6461083135804686943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6883942518268085225}
+  m_Layer: 0
+  m_Name: Fire Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6883942518268085225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461083135804686943}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.597, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9069883181185774843}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6763407177472349782
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +265,8 @@ Transform:
   m_LocalPosition: {x: -0.4, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6883942518268085225}
   m_Father: {fileID: 7445592921461137078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5632846020978962345

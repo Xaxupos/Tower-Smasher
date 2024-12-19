@@ -97,6 +97,6 @@ public class TowerShooting : TowerComponent
         var directionToEnemy = _currentTrackedEnemy.transform.position - _rotatePivotPoint.transform.position;
         var currentForward = -_rotatePivotPoint.transform.right;
 
-        return Vector2.Dot(directionToEnemy, currentForward) >= 0.9f;
+        return Vector2.Dot(directionToEnemy, currentForward) >= 0.975f;
     }
 }

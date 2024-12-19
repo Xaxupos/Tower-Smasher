@@ -15,6 +15,12 @@ public abstract class BulletBase : MonoBehaviour
     {
         ContactPoint2D contact = other.contacts[0];
 
+        if(other.gameObject.GetComponentInChildren<HealthSystem>())
+        {
+            var healthSystem = other.gameObject.GetComponentInChildren<HealthSystem>();
+            healthSystem.TakeDamage((int)_currentData.Damage);
+        }
+
         CreateAudioVisuals(_config.ImpactVFX, contact.point, _config.ImpactClip, true);
         _projectileLifeTimer?.StopTimer();
         PoolManager.Instance.ReleaseToPool(_config.BulletType, gameObject);

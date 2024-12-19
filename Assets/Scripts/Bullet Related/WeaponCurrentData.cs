@@ -6,6 +6,7 @@ public struct WeaponCurrentData
     public float Damage;
     public float FireCooldown;
     public float ProjectileSpeed;
+    public float MaxShootingDistance;
 
     public WeaponCurrentData(WeaponStrategy weaponStrategy)
     {
@@ -13,5 +14,6 @@ public struct WeaponCurrentData
         Damage = weaponStrategy.Damage;
         FireCooldown = weaponStrategy.FireCooldown;
         ProjectileSpeed = weaponStrategy.ProjectileSpeed;
+        MaxShootingDistance = weaponStrategy.MaxShootingDistance;
     }
 }

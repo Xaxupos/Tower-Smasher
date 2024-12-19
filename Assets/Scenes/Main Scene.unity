@@ -289,7 +289,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 46f3dd02515d10043a2c1645553800c2, type: 2}
   spawnStrategy: {fileID: 11400000, guid: d02d558eb8ebbf74089b0bf40d048808, type: 2}
   _tower: {fileID: 2073309529}
-  _maxEnemies: 1
+  _maxEnemies: 3
 --- !u!4 &575823762
 Transform:
   m_ObjectHideFlags: 0
@@ -399,6 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 783174725}
   - component: {fileID: 783174724}
+  - component: {fileID: 783174726}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -433,6 +434,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &783174726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783174723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0136a42db32089b45bc4e1404b9515fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventChannel: {fileID: 11400000, guid: 16690e811f5c7ce469f56cd2b2966c44, type: 2}
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 783174724}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RemoveEnemy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1481678841
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +552,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 417722604067176564, guid: c883fd40a64a5574b99f3d0d8d7e2d2e, type: 3}
+      propertyPath: _currentStrategy
+      value: 
+      objectReference: {fileID: 11400000, guid: eb86a030c5cab4149aa2b9e3ce99f03b, type: 2}
     - target: {fileID: 722294833497900564, guid: c883fd40a64a5574b99f3d0d8d7e2d2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2372537661930516910}
   - component: {fileID: 417722604067176564}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tower Shooting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,6 +48,11 @@ MonoBehaviour:
   _firePoint: {fileID: 6883942518268085225}
   _bulletConfig: {fileID: 11400000, guid: d422b08b6878e04409247de202602b73, type: 2}
   _currentStrategy: {fileID: 11400000, guid: eb86a030c5cab4149aa2b9e3ce99f03b, type: 2}
+  _weaponCurrentData:
+    RotationSpeed: 0
+    Damage: 0
+    FireCooldown: 0
+    ProjectileSpeed: 0
 --- !u!1 &2067548240827932796
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722294833497900564}
   - component: {fileID: 7663395625700151055}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 645772939050406583}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Scripts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1465480584159987771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6883942518268085225}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9069883181185774843}
   - component: {fileID: 5632846020978962345}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooting Tube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6795494282858782624}
   - component: {fileID: 228348292714512817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7445592921461137078}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tube Rotate Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

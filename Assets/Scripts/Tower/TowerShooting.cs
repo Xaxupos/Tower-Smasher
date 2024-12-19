@@ -23,8 +23,13 @@ public class TowerShooting : TowerComponent
 
     private void Update() 
     {
-        AssignClosestEnemy();
         _fireCooldownTimer.Update(Time.deltaTime);
+
+        if(_currentTrackedEnemy && !_currentTrackedEnemy.gameObject.activeInHierarchy)
+            _currentTrackedEnemy = null;
+
+        if(!_currentTrackedEnemy)
+            AssignClosestEnemyInRange();
 
         if(!_currentTrackedEnemy) return;
 
@@ -51,7 +56,7 @@ public class TowerShooting : TowerComponent
         _weaponCurrentData = new WeaponCurrentData(_currentStrategy);
     }
 
-    private void AssignClosestEnemy()
+    private void AssignClosestEnemyInRange()
     {
         var aliveEnemiesList = GameManager.Instance.GetAliveEnemies;
 
@@ -62,11 +67,15 @@ public class TowerShooting : TowerComponent
         }
 
         float closestDistance = float.MaxValue;
+        float shootingDistance = _weaponCurrentData.MaxShootingDistance;
         EnemyBase closestEnemy = null;
 
         foreach (var enemy in aliveEnemiesList)
         {
             float distance = Vector2.Distance(transform.position, enemy.transform.position);
+
+            if(distance > shootingDistance) continue;
+
             if (distance < closestDistance)
             {
                 closestDistance = distance;

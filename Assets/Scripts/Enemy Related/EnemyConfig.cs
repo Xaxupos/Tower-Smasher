@@ -6,5 +6,5 @@ public class EnemyConfig : ScriptableObject
 {
     public PooledType EnemyType;
     public float Speed;
-    [MinMaxSlider(0, 100)] public Vector2 Health;
+    [MinMaxSlider(0, 100)] public Vector2Int Health;
 }

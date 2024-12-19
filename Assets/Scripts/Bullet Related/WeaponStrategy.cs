@@ -2,6 +2,7 @@ using UnityEngine;
 
 public abstract class WeaponStrategy : ScriptableObject
 {
+    public float MaxShootingDistance = 6f;
     public float RotationSpeed = 2f;
     public float Damage = 1f;
     public float FireCooldown = 1f;

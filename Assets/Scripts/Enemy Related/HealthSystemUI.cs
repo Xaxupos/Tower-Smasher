@@ -11,17 +11,14 @@ public class HealthSystemUI : MonoBehaviour
     {
         _healthSystem.OnDamageTaken.AddListener(UpdateHealthText);
         _healthSystem.OnHeal.AddListener(UpdateHealthText);
-    }
-
-    private void Start() 
-    {
-        UpdateHealthText();
+        _healthSystem.OnHealthSystemInitialized += UpdateHealthText;
     }
 
     private void OnDisable() 
     {
         _healthSystem.OnDamageTaken.RemoveListener(UpdateHealthText);
         _healthSystem.OnHeal.RemoveListener(UpdateHealthText);
+        _healthSystem.OnHealthSystemInitialized -= UpdateHealthText;
     }
 
     private void UpdateHealthText()

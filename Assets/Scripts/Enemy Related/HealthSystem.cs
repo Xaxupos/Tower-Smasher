@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using VInspector;
@@ -9,6 +10,8 @@ public class HealthSystem : MonoBehaviour
     public UnityEvent OnHeal;
     public UnityEvent OnDeath;
 
+    public event Action OnHealthSystemInitialized;
+
     [SerializeField] [ReadOnly] private int _currentHealth;
     private int _maxHealth;
 
@@ -18,6 +21,8 @@ public class HealthSystem : MonoBehaviour
     {
         _maxHealth = maxHealth;
         _currentHealth = maxHealth;
+
+        OnHealthSystemInitialized?.Invoke();
     }
 
     public void TakeDamage(int damage)

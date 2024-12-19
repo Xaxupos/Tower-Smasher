@@ -99,13 +99,15 @@ public class TowerShooting : TowerComponent
         _rotatePivotPoint.rotation = Quaternion.Euler(0, 0, angle);
     }
 
-    private bool IsLockedIn()
-    {
-        if (_currentTrackedEnemy == null) return false;
-        
-        var directionToEnemy = _currentTrackedEnemy.transform.position - _rotatePivotPoint.transform.position;
-        var currentForward = -_rotatePivotPoint.transform.right;
+private bool IsLockedIn()
+{
+    if (_currentTrackedEnemy == null) return false;
 
-        return Vector2.Dot(directionToEnemy, currentForward) >= 0.975f;
-    }
+    var directionToEnemy = _currentTrackedEnemy.transform.position - _rotatePivotPoint.transform.position;
+    var currentForward = -_rotatePivotPoint.transform.right;
+
+    float angleToEnemy = Vector2.Angle(currentForward, directionToEnemy);
+
+    return angleToEnemy <= 5f;
+}
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using VInspector;
 
@@ -6,10 +7,18 @@ public abstract class BulletBase : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidbody2D;
     [SerializeField] private BulletConfig _config;
+    [SerializeField] private List<BulletImpactFeature> impactFeatures = new List<BulletImpactFeature>();
     [ReadOnly] [SerializeField] private BulletCurrentData _currentData;
+
+    public BulletConfig BulletConfig => _config;
 
     private WeaponStrategy _weaponStrategy;
     private Timer _projectileLifeTimer;
+
+    public void AddImpactFeature(BulletImpactFeature feature)
+    {
+        impactFeatures.Add(feature);
+    }
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
@@ -19,6 +28,11 @@ public abstract class BulletBase : MonoBehaviour
         {
             var healthSystem = other.gameObject.GetComponentInChildren<HealthSystem>();
             healthSystem.TakeDamage((int)_currentData.Damage);
+        }
+
+        foreach (var feature in impactFeatures)
+        {
+            feature.OnImpact(this, other);
         }
 
         CreateAudioVisuals(_config.ImpactVFX, contact.point, _config.ImpactClip, true);

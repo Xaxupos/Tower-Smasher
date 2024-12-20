@@ -108,6 +108,6 @@ private bool IsLockedIn()
 
     float angleToEnemy = Vector2.Angle(currentForward, directionToEnemy);
 
-    return angleToEnemy <= 5f;
+    return angleToEnemy <= 2f;
 }
 }
